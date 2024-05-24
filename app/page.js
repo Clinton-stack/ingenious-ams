@@ -1,10 +1,9 @@
 import BarChart from "@/components/BarChart";
 import DonutChart from "@/components/DonutChart";
 import GaugeChart from "@/components/GuageChart";
-import Layout from "@/components/HomeLayout";
 import MultiLevelDoughnutChart from "@/components/MultiDonutChart";
 import TableChart from "@/components/TableChart";
-import { Box, Button, Flex, HStack, Image, Spacer, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Image, Select, Spacer, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FaUserAlt, FaUsers, FaUserSecret } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -26,7 +25,7 @@ const Dashboard = () => {
 
 
   return (
-    <Layout>
+    <main>
       <Box bgColor="white" mt="20px" p="10px" borderRadius="5px">
         <Text as="h3" size="sm" fontWeight="bold">
           Admin Dashboard
@@ -119,9 +118,11 @@ const Dashboard = () => {
               Assets
             </Text>
             <Spacer />
-            <Button rightIcon={<IoIosArrowDown />} size='sm' h='20px' p='2px'>
-              Last 30 days
-            </Button>
+            <Select  size='sm' variant='unstyled' w='fit-content' bgColor='gray.200' p='2px'> 
+              <option value='Last 30 days'>Last 30 days</option>
+              <option value='Last 20 days'>Last 20 days</option>
+              <option value='Last 10 days'>Last 10 days</option>
+            </Select>
           </Stack>
 
           <Text fontSize='10px' >
@@ -136,9 +137,11 @@ const Dashboard = () => {
               Assets Managers
             </Text>
             <Spacer />
-            <Button rightIcon={<IoIosArrowDown />} size='sm' h='20px' p='2px'>
-              Last 30 days
-            </Button>
+            <Select  size='sm' variant='unstyled' w='fit-content' bgColor='gray.200' p='2px'> 
+              <option value='Last 30 days'>Last 30 days</option>
+              <option value='Last 20 days'>Last 20 days</option>
+              <option value='Last 10 days'>Last 10 days</option>
+            </Select>
           </Stack>
           <Text fontSize='10px' >
             Top Assets Managers
@@ -153,9 +156,11 @@ const Dashboard = () => {
               Collaborators
             </Text>
             <Spacer />
-            <Button rightIcon={<IoIosArrowDown />} size='sm' h='20px' p='2px'>
-              Last 30 days
-            </Button>
+            <Select  size='sm' variant='unstyled' w='fit-content' bgColor='gray.200' p='2px'> 
+              <option value='Last 30 days'>Last 30 days</option>
+              <option value='Last 20 days'>Last 20 days</option>
+              <option value='Last 10 days'>Last 10 days</option>
+            </Select>
           </Stack>
 
           <GaugeChart />
@@ -180,7 +185,7 @@ const Dashboard = () => {
 
       </Flex>
 
-    </Layout>
+    </main>
   );
 };
 

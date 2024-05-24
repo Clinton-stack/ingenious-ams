@@ -72,7 +72,7 @@ const MultiLevelDoughnutChart = () => {
 
   return (
     <Center w='100%' h='auto' p='80px'>
-      <Doughnut data={data} options={options} style={{padding: '90px'}}/>
+      <Doughnut data={data} options={options} />
     </Center>
   );
 };

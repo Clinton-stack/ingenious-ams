@@ -1,6 +1,8 @@
+// /app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Grid, GridItem } from '@chakra-ui/react';
+import HomeLayout from "@/components/HomeLayout";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +17,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ChakraProvider>
-          {children}      
+         <HomeLayout>
+          {children}
+         </HomeLayout>
         </ChakraProvider>
       </body>
     </html>
