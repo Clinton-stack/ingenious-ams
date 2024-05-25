@@ -11,6 +11,7 @@ import { useState } from "react";
 import {
   Box,
   Button,
+  Checkbox,
   Flex,
   HStack,
   Input,
@@ -28,31 +29,53 @@ import { CiFilter } from "react-icons/ci";
 import { GoDash } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-export default function BasicTable({ data, columns }) {
+
+export default function BasicTable({ data, columns, tableName }) {
   const [sorting, setSorting] = useState([]);
   const [filtering, setFiltering] = useState("");
   const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 10 });
+  const [rowSelection, setRowSelection] = useState({});
+
+  const selectionColumn = {
+    id: "selection",
+    header: ({ table }) => (
+      <Checkbox
+        isChecked={table.getIsAllRowsSelected()}
+        isIndeterminate={table.getIsSomeRowsSelected()}
+        onChange={table.getToggleAllRowsSelectedHandler()}
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        isChecked={row.getIsSelected()}
+        isIndeterminate={row.getIsSomeSelected()}
+        onChange={row.getToggleSelectedHandler()}
+      />
+    ),
+  };
 
   const table = useReactTable({
     data,
-    columns,
+    columns: [selectionColumn, ...columns],
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
     onPaginationChange: setPagination,
     state: {
-      sorting: sorting,
+      sorting,
       globalFilter: filtering,
-      pagination: pagination,
+      pagination,
+      rowSelection,
     },
     onSortingChange: setSorting,
     onGlobalFilterChange: setFiltering,
+    onRowSelectionChange: setRowSelection,
+    enableRowSelection: true,
   });
 
-  console.log("Can next page:", table.getCanNextPage());
-  console.log("Page count:", table.getPageCount());
-  console.log("Current page index:", table.getState().pagination.pageIndex);
+  const selectedData = table.getSelectedRowModel().rows.map((row) => row.original);
+
 
   return (
     <Box>
@@ -88,7 +111,7 @@ export default function BasicTable({ data, columns }) {
 
       <Box bg="#fff" p="10px" mt="10px" borderRadius="5px">
         <Text as="h3" size="sm" fontWeight="bold">
-          Users
+          {tableName}
         </Text>
         <TableContainer>
           <Table variant="striped" colorScheme="gray" size="sm">
@@ -106,11 +129,11 @@ export default function BasicTable({ data, columns }) {
                             header.column.columnDef.header,
                             header.getContext()
                           )}
-                      {
-                        { asc: "▲", desc: "▼" }[
-                          header.column.getIsSorted() ?? null
-                        ]
-                      }
+                      {header.column.getIsSorted()
+                        ? header.column.getIsSorted() === "asc"
+                          ? " ▲"
+                          : " ▼"
+                        : null}
                     </Th>
                   ))}
                 </Tr>
@@ -118,7 +141,11 @@ export default function BasicTable({ data, columns }) {
             </Thead>
             <Tbody>
               {table.getRowModel().rows.map((row) => (
-                <Tr key={row.id}>
+                <Tr
+                  key={row.id}
+                  cursor="pointer"
+                  onClick={() => row.toggleSelected()}
+                >
                   {row.getVisibleCells().map((cell) => (
                     <Td key={cell.id}>
                       {flexRender(
@@ -133,19 +160,19 @@ export default function BasicTable({ data, columns }) {
           </Table>
         </TableContainer>
 
-        <HStack mt="5px" align="center" justify="center">
+        <HStack mt="5px" align="center" justify="center" wrap="wrap">
           <Button onClick={() => table.setPageIndex(0)}>{"<<"}</Button>{" "}
           <Button
             isDisabled={!table.getCanPreviousPage()}
             onClick={() => table.previousPage()}
-            _disabled={{ bgColor: "#fff", cursor: "not-allowed"}}
+            _disabled={{ bgColor: "#fff", cursor: "not-allowed" }}
           >
             {"<"}
           </Button>{" "}
           <Button
             isDisabled={!table.getCanNextPage()}
             onClick={() => table.nextPage()}
-            _disabled={{ bgColor: "#fff", cursor: "not-allowed"}}
+            _disabled={{ bgColor: "#fff", cursor: "not-allowed" }}
           >
             {">"}
           </Button>{" "}

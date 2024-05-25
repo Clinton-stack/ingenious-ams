@@ -1,8 +1,8 @@
-import BarChart from "@/components/BarChart";
-import DonutChart from "@/components/DonutChart";
-import GaugeChart from "@/components/GuageChart";
-import MultiLevelDoughnutChart from "@/components/MultiDonutChart";
-import TableChart from "@/components/TableChart";
+import BarChart from "@/components/DasboardComponents/BarChart";
+import DonutChart from "@/components/DasboardComponents/DonutChart";
+import GaugeChart from "@/components/DasboardComponents/GuageChart";
+import MultiLevelDoughnutChart from "@/components/DasboardComponents/MultiDonutChart";
+import TableChart from "@/components/DasboardComponents/TableChart";
 import { Box, Button, Flex, HStack, Image, Select, Spacer, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FaUserAlt, FaUsers, FaUserSecret } from "react-icons/fa";

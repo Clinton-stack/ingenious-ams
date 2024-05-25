@@ -44,3 +44,8 @@ a {
 .iconStyles {
   font-size: 25px;
 }
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}

@@ -4,6 +4,7 @@ import { useMemo} from "react";
 
 export default function Users() {
   const data = useMemo(() => sampleData, []);
+  const tableName = "Users";
 
   /** @type import('@tanstack/react-table).ColumnDef<any>*/
   const columns = [
@@ -50,7 +51,7 @@ export default function Users() {
   ];
   return (
     <div>
-    <BasicTable data={data} columns={columns}/>
+    <BasicTable data={data} columns={columns} tableName={tableName}/>
     </div>
   )
 }

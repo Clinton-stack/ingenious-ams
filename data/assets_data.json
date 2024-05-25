@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Genesis Healthcare, Inc.",
+    "type": "Health Care",
+    "location": "Russia",
+    "consumers": 153,
+    "assets_manager": "Civista Bancshares, Inc. "
+  },
+  {
+    "id": 2,
+    "name": "Kennedy-Wilson Holdings Inc.",
+    "type": "Finance",
+    "location": "Costa Rica",
+    "consumers": 162,
+    "assets_manager": "REGENXBIO Inc."
+  },
+  {
+    "id": 3,
+    "name": "Approach Resources Inc.",
+    "type": "Energy",
+    "location": "Dominican Republic",
+    "consumers": 60,
+    "assets_manager": "Ramco-Gershenson Properties Trust"
+  },
+  {
+    "id": 4,
+    "name": "Euroseas Ltd.",
+    "type": "Transportation",
+    "location": "Colombia",
+    "consumers": 227,
+    "assets_manager": "Brightcove Inc."
+  },
+  {
+    "id": 5,
+    "name": "First Trust Eurozone AlphaDEX ETF",
+    "type": "n/a",
+    "location": "Russia",
+    "consumers": 153,
+    "assets_manager": "First Bank"
+  },
+  {
+    "id": 6,
+    "name": "PBF Logistics LP",
+    "type": "Energy",
+    "location": "Philippines",
+    "consumers": 87,
+    "assets_manager": "Global Water Resources, Inc."
+  },
+  {
+    "id": 7,
+    "name": "Broadwind Energy, Inc.",
+    "type": "Capital Goods",
+    "location": "South Africa",
+    "consumers": 85,
+    "assets_manager": "Banco Latinoamericano de Comercio Exterior, S.A."
+  },
+  {
+    "id": 8,
+    "name": "Kamada Ltd.",
+    "type": "Health Care",
+    "location": "Poland",
+    "consumers": 372,
+    "assets_manager": "Nuveen Energy MLP Total Return Fund"
+  },
+  {
+    "id": 9,
+    "name": "Performance Food Group Company",
+    "type": "Consumer Non-Durables",
+    "location": "Portugal",
+    "consumers": 310,
+    "assets_manager": "Reis, Inc"
+  },
+  {
+    "id": 10,
+    "name": "Citrix Systems, Inc.",
+    "type": "Technology",
+    "location": "Indonesia",
+    "consumers": 80,
+    "assets_manager": "AmeriServ Financial Inc."
+  },
+  {
+    "id": 11,
+    "name": "Ion Geophysical Corporation",
+    "type": "Energy",
+    "location": "Malaysia",
+    "consumers": 73,
+    "assets_manager": "Bankwell Financial Group, Inc."
+  },
+  {
+    "id": 12,
+    "name": "Intercept Pharmaceuticals, Inc.",
+    "type": "Health Care",
+    "location": "China",
+    "consumers": 434,
+    "assets_manager": "Lindblad Expeditions Holdings Inc. "
+  },
+  {
+    "id": 13,
+    "name": "Lipocine Inc.",
+    "type": "Health Care",
+    "location": "Greece",
+    "consumers": 175,
+    "assets_manager": "Veritex Holdings, Inc."
+  },
+  {
+    "id": 14,
+    "name": "Team, Inc.",
+    "type": "Consumer Services",
+    "location": "Malaysia",
+    "consumers": 306,
+    "assets_manager": "Masonite International Corporation"
+  },
+  {
+    "id": 15,
+    "name": "Chipotle Mexican Grill, Inc.",
+    "type": "Consumer Services",
+    "location": "Philippines",
+    "consumers": 344,
+    "assets_manager": "Eaton Vance Corporation"
+  },
+  {
+    "id": 16,
+    "name": "Colony NorthStar, Inc.",
+    "type": "n/a",
+    "location": "Angola",
+    "consumers": 237,
+    "assets_manager": "Medical Transcription Billing, Corp."
+  },
+  {
+    "id": 17,
+    "name": "Blackrock MuniYield Quality Fund, Inc.",
+    "type": "n/a",
+    "location": "China",
+    "consumers": 191,
+    "assets_manager": "Capitala Finance Corp."
+  },
+  {
+    "id": 18,
+    "name": "Pan American Silver Corp.",
+    "type": "Basic Industries",
+    "location": "Indonesia",
+    "consumers": 425,
+    "assets_manager": "Eaton Vance Tax-Managed Diversified Equity Income Fund"
+  },
+  {
+    "id": 19,
+    "name": "Mammoth Energy Services, Inc.",
+    "type": "Energy",
+    "location": "Chile",
+    "consumers": 332,
+    "assets_manager": "Adesto Technologies Corporation"
+  },
+  {
+    "id": 20,
+    "name": "Iridium Communications Inc",
+    "type": "Consumer Durables",
+    "location": "China",
+    "consumers": 392,
+    "assets_manager": "Semgroup Corporation"
+  },
+  {
+    "id": 21,
+    "name": "Shineco, Inc.",
+    "type": "Consumer Non-Durables",
+    "location": "Indonesia",
+    "consumers": 64,
+    "assets_manager": "Discovery Communications, Inc."
+  },
+  {
+    "id": 22,
+    "name": "New York Times Company (The)",
+    "type": "Consumer Services",
+    "location": "Finland",
+    "consumers": 365,
+    "assets_manager": "Extended Stay America, Inc."
+  },
+  {
+    "id": 23,
+    "name": "Galena Biopharma, Inc.",
+    "type": "Health Care",
+    "location": "China",
+    "consumers": 352,
+    "assets_manager": "AAR Corp."
+  },
+  {
+    "id": 24,
+    "name": "L Brands, Inc.",
+    "type": "Consumer Services",
+    "location": "Indonesia",
+    "consumers": 126,
+    "assets_manager": "Celestica, Inc."
+  },
+  {
+    "id": 25,
+    "name": "Gores Holdings II, Inc.",
+    "type": "Finance",
+    "location": "Poland",
+    "consumers": 303,
+    "assets_manager": "Travelzoo"
+  },
+  {
+    "id": 26,
+    "name": "Flexsteel Industries, Inc.",
+    "type": "Consumer Durables",
+    "location": "China",
+    "consumers": 58,
+    "assets_manager": "Nuveen California Municipal Value Fund 2"
+  },
+  {
+    "id": 27,
+    "name": "StealthGas, Inc.",
+    "type": "Transportation",
+    "location": "China",
+    "consumers": 490,
+    "assets_manager": "Liberty Expedia Holdings, Inc."
+  },
+  {
+    "id": 28,
+    "name": "KMG Chemicals, Inc.",
+    "type": "Basic Industries",
+    "location": "Indonesia",
+    "consumers": 349,
+    "assets_manager": "White Mountains Insurance Group, Ltd."
+  },
+  {
+    "id": 29,
+    "name": "RAIT Financial Trust",
+    "type": "n/a",
+    "location": "Egypt",
+    "consumers": 210,
+    "assets_manager": "First Trust NASDAQ-100 Equal Weighted Index Fund"
+  },
+  {
+    "id": 30,
+    "name": "Blackrock Health Sciences Trust",
+    "type": "n/a",
+    "location": "Botswana",
+    "consumers": 137,
+    "assets_manager": "Interpublic Group of Companies, Inc. (The)"
+  },
+  {
+    "id": 31,
+    "name": "Colony NorthStar, Inc.",
+    "type": "n/a",
+    "location": "Poland",
+    "consumers": 135,
+    "assets_manager": "Galmed Pharmaceuticals Ltd."
+  },
+  {
+    "id": 32,
+    "name": "Sina Corporation",
+    "type": "Technology",
+    "location": "Ukraine",
+    "consumers": 249,
+    "assets_manager": "STAAR Surgical Company"
+  },
+  {
+    "id": 33,
+    "name": "PS Business Parks, Inc.",
+    "type": "n/a",
+    "location": "China",
+    "consumers": 225,
+    "assets_manager": "FORM Holdings Corp."
+  },
+  {
+    "id": 34,
+    "name": "Dime Community Bancshares, Inc.",
+    "type": "Finance",
+    "location": "Kazakhstan",
+    "consumers": 226,
+    "assets_manager": "ACNB Corporation"
+  },
+  {
+    "id": 35,
+    "name": "QCR Holdings, Inc.",
+    "type": "Finance",
+    "location": "Indonesia",
+    "consumers": 369,
+    "assets_manager": "Special Opportunities Fund Inc."
+  },
+  {
+    "id": 36,
+    "name": "The Ensign Group, Inc.",
+    "type": "Health Care",
+    "location": "Sri Lanka",
+    "consumers": 499,
+    "assets_manager": "Regal Beloit Corporation"
+  },
+  {
+    "id": 37,
+    "name": "The Travelers Companies, Inc.",
+    "type": "Finance",
+    "location": "China",
+    "consumers": 111,
+    "assets_manager": "Molson Coors Brewing  Company"
+  },
+  {
+    "id": 38,
+    "name": "Wright Medical Group N.V.",
+    "type": "Health Care",
+    "location": "Tanzania",
+    "consumers": 465,
+    "assets_manager": "Tetra Technologies, Inc."
+  },
+  {
+    "id": 39,
+    "name": "DXP Enterprises, Inc.",
+    "type": "Capital Goods",
+    "location": "China",
+    "consumers": 186,
+    "assets_manager": "New York Mortgage Trust, Inc."
+  },
+  {
+    "id": 40,
+    "name": "Westbury Bancorp, Inc.",
+    "type": "Finance",
+    "location": "China",
+    "consumers": 183,
+    "assets_manager": "Cooper-Standard Holdings Inc."
+  },
+  {
+    "id": 41,
+    "name": "Wells Fargo Global Dividend Opportunity Fund",
+    "type": "n/a",
+    "location": "Thailand",
+    "consumers": 250,
+    "assets_manager": "Quaker Chemical Corporation"
+  },
+  {
+    "id": 42,
+    "name": "Sturm, Ruger & Company, Inc.",
+    "type": "Capital Goods",
+    "location": "China",
+    "consumers": 288,
+    "assets_manager": "Boyd Gaming Corporation"
+  },
+  {
+    "id": 43,
+    "name": "Life Storage, Inc.",
+    "type": "Consumer Services",
+    "location": "Germany",
+    "consumers": 172,
+    "assets_manager": "Hope Bancorp, Inc."
+  },
+  {
+    "id": 44,
+    "name": "Harvest Capital Credit Corporation",
+    "type": "n/a",
+    "location": "Libya",
+    "consumers": 152,
+    "assets_manager": "Kite Realty Group Trust"
+  },
+  {
+    "id": 45,
+    "name": "Spok Holdings, Inc.",
+    "type": "Public Utilities",
+    "location": "Malaysia",
+    "consumers": 159,
+    "assets_manager": "Citigroup Inc."
+  },
+  {
+    "id": 46,
+    "name": "J.B. Hunt Transport Services, Inc.",
+    "type": "Transportation",
+    "location": "China",
+    "consumers": 400,
+    "assets_manager": "Autodesk, Inc."
+  },
+  {
+    "id": 47,
+    "name": "Waters Corporation",
+    "type": "Capital Goods",
+    "location": "Indonesia",
+    "consumers": 234,
+    "assets_manager": "VIVUS, Inc."
+  },
+  {
+    "id": 48,
+    "name": "Celanese Corporation",
+    "type": "Basic Industries",
+    "location": "China",
+    "consumers": 79,
+    "assets_manager": "iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund"
+  },
+  {
+    "id": 49,
+    "name": "Hamilton Bancorp, Inc.",
+    "type": "Finance",
+    "location": "Russia",
+    "consumers": 320,
+    "assets_manager": "Equus Total Return, Inc."
+  },
+  {
+    "id": 50,
+    "name": "Immuron Limited",
+    "type": "Health Care",
+    "location": "Nigeria",
+    "consumers": 451,
+    "assets_manager": "GasLog LP."
+  },
+  {
+    "id": 51,
+    "name": "Blackrock Muni Intermediate Duration Fund Inc",
+    "type": "n/a",
+    "location": "Palestinian Territory",
+    "consumers": 248,
+    "assets_manager": "Bank of America Corporation"
+  },
+  {
+    "id": 52,
+    "name": "Washington Real Estate Investment Trust",
+    "type": "n/a",
+    "location": "Poland",
+    "consumers": 256,
+    "assets_manager": "Beneficial Bancorp, Inc."
+  },
+  {
+    "id": 53,
+    "name": "Limbach Holdings, Inc.",
+    "type": "Basic Industries",
+    "location": "Argentina",
+    "consumers": 225,
+    "assets_manager": "The Navigators Group, Inc."
+  },
+  {
+    "id": 54,
+    "name": "Source Capital, Inc.",
+    "type": "n/a",
+    "location": "Indonesia",
+    "consumers": 356,
+    "assets_manager": "Akers Biosciences Inc"
+  },
+  {
+    "id": 55,
+    "name": "Morgan Stanley",
+    "type": "n/a",
+    "location": "Peru",
+    "consumers": 64,
+    "assets_manager": "Williams-Sonoma, Inc."
+  },
+  {
+    "id": 56,
+    "name": "Versum Materials, Inc.",
+    "type": "Basic Industries",
+    "location": "Faroe Islands",
+    "consumers": 87,
+    "assets_manager": "Nord Anglia Education, Inc."
+  },
+  {
+    "id": 57,
+    "name": "ABB Ltd",
+    "type": "Consumer Durables",
+    "location": "China",
+    "consumers": 213,
+    "assets_manager": "Rennova Health, Inc."
+  },
+  {
+    "id": 58,
+    "name": "iShares FTSE EPRA/NAREIT Global Real Estate ex-U.S. Index Fund",
+    "type": "n/a",
+    "location": "France",
+    "consumers": 350,
+    "assets_manager": "Sonic Automotive, Inc."
+  },
+  {
+    "id": 59,
+    "name": "Caseys General Stores, Inc.",
+    "type": "Consumer Durables",
+    "location": "Japan",
+    "consumers": 145,
+    "assets_manager": "TAT Technologies Ltd."
+  },
+  {
+    "id": 60,
+    "name": "Dynex Capital, Inc.",
+    "type": "n/a",
+    "location": "China",
+    "consumers": 114,
+    "assets_manager": "Charles & Colvard Ltd"
+  },
+  {
+    "id": 61,
+    "name": "TRACON Pharmaceuticals, Inc.",
+    "type": "Health Care",
+    "location": "Indonesia",
+    "consumers": 383,
+    "assets_manager": "Synalloy Corporation"
+  },
+  {
+    "id": 62,
+    "name": "Navient Corporation",
+    "type": "Finance",
+    "location": "China",
+    "consumers": 286,
+    "assets_manager": "Boulevard Acquisition Corp. II"
+  },
+  {
+    "id": 63,
+    "name": "Axcelis Technologies, Inc.",
+    "type": "Technology",
+    "location": "China",
+    "consumers": 191,
+    "assets_manager": "Universal Health Services, Inc."
+  },
+  {
+    "id": 64,
+    "name": "Bank of America Corporation",
+    "type": "n/a",
+    "location": "Russia",
+    "consumers": 263,
+    "assets_manager": "Corning Incorporated"
+  },
+  {
+    "id": 65,
+    "name": "MagneGas Corporation",
+    "type": "Technology",
+    "location": "Brazil",
+    "consumers": 276,
+    "assets_manager": "Gladstone Investment Corporation"
+  },
+  {
+    "id": 66,
+    "name": "CNA Financial Corporation",
+    "type": "Finance",
+    "location": "China",
+    "consumers": 191,
+    "assets_manager": "Universal Display Corporation"
+  },
+  {
+    "id": 67,
+    "name": "NVE Corporation",
+    "type": "Technology",
+    "location": "China",
+    "consumers": 133,
+    "assets_manager": "CytRx Corporation"
+  },
+  {
+    "id": 68,
+    "name": "Manulife Financial Corp",
+    "type": "Finance",
+    "location": "Indonesia",
+    "consumers": 382,
+    "assets_manager": "CoBiz Financial Inc."
+  },
+  {
+    "id": 69,
+    "name": "Coherent, Inc.",
+    "type": "Capital Goods",
+    "location": "China",
+    "consumers": 327,
+    "assets_manager": "Nuveen Insured California Select Tax-Free Income Portfolio"
+  },
+  {
+    "id": 70,
+    "name": "Nuveen Floating Rate Income Fund",
+    "type": "n/a",
+    "location": "Thailand",
+    "consumers": 453,
+    "assets_manager": "Legg Mason Developed EX-US Diversified Core ETF"
+  },
+  {
+    "id": 71,
+    "name": "Origo Acquisition Corporation",
+    "type": "Finance",
+    "location": "China",
+    "consumers": 272,
+    "assets_manager": "AXT Inc"
+  },
+  {
+    "id": 72,
+    "name": "Granite Real Estate Inc.",
+    "type": "n/a",
+    "location": "Russia",
+    "consumers": 372,
+    "assets_manager": "WPX Energy, Inc."
+  },
+  {
+    "id": 73,
+    "name": "Cummins Inc.",
+    "type": "Energy",
+    "location": "Brazil",
+    "consumers": 315,
+    "assets_manager": "Streamline Health Solutions, Inc."
+  },
+  {
+    "id": 74,
+    "name": "MFA Financial, Inc.",
+    "type": "Consumer Services",
+    "location": "Mexico",
+    "consumers": 247,
+    "assets_manager": "UMH Properties, Inc."
+  },
+  {
+    "id": 75,
+    "name": "Extraction Oil & Gas, Inc.",
+    "type": "Energy",
+    "location": "Syria",
+    "consumers": 491,
+    "assets_manager": "First Trust Eurozone AlphaDEX ETF"
+  },
+  {
+    "id": 76,
+    "name": "Covisint Corporation",
+    "type": "Technology",
+    "location": "Mauritius",
+    "consumers": 354,
+    "assets_manager": "Eaton Vance Corporation"
+  },
+  {
+    "id": 77,
+    "name": "SunTrust Banks, Inc.",
+    "type": "n/a",
+    "location": "Philippines",
+    "consumers": 436,
+    "assets_manager": "BofI Holding, Inc."
+  },
+  {
+    "id": 78,
+    "name": "Avadel Pharmaceuticals plc",
+    "type": "Health Care",
+    "location": "Indonesia",
+    "consumers": 132,
+    "assets_manager": "MSC Industrial Direct Company, Inc."
+  },
+  {
+    "id": 79,
+    "name": "Vaalco Energy Inc",
+    "type": "Energy",
+    "location": "China",
+    "consumers": 420,
+    "assets_manager": "Bridgeline Digital, Inc."
+  },
+  {
+    "id": 80,
+    "name": "Gaming and Leisure Properties, Inc.",
+    "type": "Consumer Services",
+    "location": "Philippines",
+    "consumers": 60,
+    "assets_manager": "Gabelli Global Small and Mid Cap Value Trust (The)"
+  },
+  {
+    "id": 81,
+    "name": "WildHorse Resource Development Corporation",
+    "type": "Energy",
+    "location": "Russia",
+    "consumers": 140,
+    "assets_manager": "Capital Bank Financial Corp."
+  },
+  {
+    "id": 82,
+    "name": "Rosehill Resources Inc.",
+    "type": "Energy",
+    "location": "Pakistan",
+    "consumers": 196,
+    "assets_manager": "TripAdvisor, Inc."
+  },
+  {
+    "id": 83,
+    "name": "Old Point Financial Corporation",
+    "type": "Finance",
+    "location": "Poland",
+    "consumers": 171,
+    "assets_manager": "Principal Financial Group Inc"
+  },
+  {
+    "id": 84,
+    "name": "ARCA biopharma, Inc.",
+    "type": "Health Care",
+    "location": "Indonesia",
+    "consumers": 139,
+    "assets_manager": "Forum Energy Technologies, Inc."
+  },
+  {
+    "id": 85,
+    "name": "Calix, Inc",
+    "type": "Consumer Services",
+    "location": "Philippines",
+    "consumers": 175,
+    "assets_manager": "Northern Trust Corporation"
+  },
+  {
+    "id": 86,
+    "name": "Social Reality, Inc.",
+    "type": "Technology",
+    "location": "China",
+    "consumers": 66,
+    "assets_manager": "Intersect ENT, Inc."
+  },
+  {
+    "id": 87,
+    "name": "CST Brands, Inc.",
+    "type": "Consumer Durables",
+    "location": "China",
+    "consumers": 386,
+    "assets_manager": "RGC Resources Inc."
+  },
+  {
+    "id": 88,
+    "name": "Neurotrope, Inc.",
+    "type": "Health Care",
+    "location": "Tanzania",
+    "consumers": 140,
+    "assets_manager": "Global X SuperDividend REIT ETF"
+  },
+  {
+    "id": 89,
+    "name": "Lehman ABS Corporation",
+    "type": "Finance",
+    "location": "Russia",
+    "consumers": 400,
+    "assets_manager": "ARMOUR Residential REIT, Inc."
+  },
+  {
+    "id": 90,
+    "name": "Liberty Global plc",
+    "type": "Consumer Services",
+    "location": "Peru",
+    "consumers": 217,
+    "assets_manager": "iShares Nasdaq Biotechnology Index Fund"
+  },
+  {
+    "id": 91,
+    "name": "Advanced Accelerator Applications S.A.",
+    "type": "Health Care",
+    "location": "Tajikistan",
+    "consumers": 164,
+    "assets_manager": "Grupo Supervielle S.A."
+  },
+  {
+    "id": 92,
+    "name": "PrimeEnergy Corporation",
+    "type": "Energy",
+    "location": "Thailand",
+    "consumers": 193,
+    "assets_manager": "Vanguard Russell 2000 Value ETF"
+  },
+  {
+    "id": 93,
+    "name": "Vantiv, Inc.",
+    "type": "Miscellaneous",
+    "location": "China",
+    "consumers": 457,
+    "assets_manager": "Stemline Therapeutics, Inc."
+  },
+  {
+    "id": 94,
+    "name": "Teekay Offshore Partners L.P.",
+    "type": "n/a",
+    "location": "China",
+    "consumers": 278,
+    "assets_manager": "Duluth Holdings Inc."
+  },
+  {
+    "id": 95,
+    "name": "Meta Financial Group, Inc.",
+    "type": "Finance",
+    "location": "Afghanistan",
+    "consumers": 131,
+    "assets_manager": "National General Holdings Corp"
+  },
+  {
+    "id": 96,
+    "name": "POSCO",
+    "type": "Basic Industries",
+    "location": "Indonesia",
+    "consumers": 74,
+    "assets_manager": "Sky Solar Holdings, Ltd."
+  },
+  {
+    "id": 97,
+    "name": "ProShares Ultra Nasdaq Biotechnology",
+    "type": "n/a",
+    "location": "France",
+    "consumers": 294,
+    "assets_manager": "Cohen & Steers Select Preferred and Income Fund, Inc."
+  },
+  {
+    "id": 98,
+    "name": "Vornado Realty Trust",
+    "type": "n/a",
+    "location": "Libya",
+    "consumers": 261,
+    "assets_manager": "Pioneer Municipal High Income Advantage Trust"
+  },
+  {
+    "id": 99,
+    "name": "GDS Holdings Limited",
+    "type": "Technology",
+    "location": "China",
+    "consumers": 379,
+    "assets_manager": "WisdomTree Emerging Markets Quality Dividend Growth Fund"
+  },
+  {
+    "id": 100,
+    "name": "iShares MSCI UAE Capped ETF",
+    "type": "n/a",
+    "location": "South Sudan",
+    "consumers": 154,
+    "assets_manager": "ShotSpotter, Inc."
+  }
+]

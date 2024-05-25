@@ -24,6 +24,7 @@ import {
 } from "react-icons/ri";
 import { CgMenuMotion } from "react-icons/cg";
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 const itemStyles = {
     color: "white",
@@ -34,18 +35,20 @@ const itemStyles = {
       color: "white",
       bg: "#597086",
     },
-    ":active": {
-      color: "white",
-      bg: "#597086",
-    },
   };
   
+  const activeItemStyles = {
+    ...itemStyles,
+    color: '#fff',
+    bg: '#597086',
+  }
+
 
 
 const Sidebar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const sidebarRef = useRef(null);
-
+  const pathname = usePathname();
   useEffect(() => {
     // add event listener to the window object to listen for clicks outside the sidebar
     const handleClickOutside = (event) => {
@@ -66,6 +69,10 @@ const Sidebar = () => {
     event.stopPropagation();
     setIsVisible(!isVisible);
   };
+
+  const getLinkStyle = (path) => {
+    return pathname === path ? activeItemStyles : itemStyles;
+  }
 
   return (
     <div ref={sidebarRef}>
@@ -99,7 +106,7 @@ const Sidebar = () => {
 
       {isVisible ? (
         <List as="nav" spacing={0.5}>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/')}>
             <NextLink href="/" className="sideLinks mRight">
               <Image
                 src="icons/dashboard.svg"
@@ -110,13 +117,13 @@ const Sidebar = () => {
               Dashboard
             </NextLink>
           </ListItem>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/users')}>
             <NextLink href="/users" className="sideLinks mRight">
               <ListIcon as={FaUserAlt} mr="20px" />
               Users
             </NextLink>
           </ListItem>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/assets')}>
             <NextLink href="/assets" className="sideLinks mRight">
               <Image
                 src="icons/assets-icon.svg"
@@ -128,8 +135,8 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
-            <NextLink href="/assetsmanagers" className="sideLinks mRight">
+          <ListItem sx={getLinkStyle('/assets-managers')}>
+            <NextLink href="/assets-managers" className="sideLinks mRight">
               <Image
                 src="icons/assets-manager-icon.svg"
                 mr="20px"
@@ -140,7 +147,7 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/collaborators')}>
             <NextLink href="/collaborators" className="sideLinks mRight">
               <Image
                 src="icons/collaborators-icon.svg"
@@ -152,34 +159,34 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
-            <NextLink href="/collaborators" className="sideLinks mRight">
+          <ListItem sx={getLinkStyle('/faciltymanagers')}>
+            <NextLink href="/facilitymanagers" className="sideLinks mRight">
               <ListIcon as={FaUserSecret} mr="20px" />
               Facility Managers
             </NextLink>
           </ListItem>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/consumers')}>
             <NextLink href="icons/consumers" className="sideLinks mRight">
               <ListIcon as={FaUsers} mr="20px" />
               Consumers
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/notifications')}>
             <NextLink href="/notifications" className="sideLinks mRight">
               <ListIcon as={IoIosNotifications} mr="20px" />
               Notifcations
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/account')}>
             <NextLink href="/account" className="sideLinks mRight">
               <ListIcon as={BsCurrencyDollar} mr="20px" />
               Accounts
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/profile')}>
             <NextLink href="/profile" className="sideLinks mRight">
               <ListIcon as={RiUserSettingsLine} mr="20px" />
               Profile Settings
@@ -188,7 +195,7 @@ const Sidebar = () => {
         </List>
       ) : (
         <List as="nav" spacing={0.5}>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/')}>
             <NextLink href="/" className="sideLinks">
               <Image
                 src="icons/dashboard.svg"
@@ -197,12 +204,12 @@ const Sidebar = () => {
               />
             </NextLink>
           </ListItem>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/users')}>
             <NextLink href="/users" className="sideLinks">
               <ListIcon as={FaUserAlt} className="iconStyles" />
             </NextLink>
           </ListItem>
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/assets')}>
             <NextLink href="/assets" className="sideLinks">
               <Image
                 src="icons/assets-icon.svg"
@@ -212,7 +219,7 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/assets-managers')}>
             <NextLink href="/asset-managers" className="sideLinks">
               <Image
                 src="icons/assets-manager-icon.svg"
@@ -222,7 +229,7 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/collaborators')}>
             <NextLink href="/collaborators" className="sideLinks">
               <Image
                 src="icons/collaborators-icon.svg"
@@ -232,31 +239,31 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/faciltymanagers')}>
             <NextLink href="/facility-managers" className="sideLinks">
               <ListIcon as={FaUserSecret} className="iconStyles" />
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/consumers')}>
             <NextLink href="/consumers" className="sideLinks">
               <ListIcon as={FaUsers} className="iconStyles" />
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/notifications')}>
             <NextLink href="/notifications" className="sideLinks">
               <ListIcon as={IoIosNotifications} className="iconStyles" />
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/account')}>
             <NextLink href="/account" className="sideLinks">
               <ListIcon as={BsCurrencyDollar} className="iconStyles" />
             </NextLink>
           </ListItem>
 
-          <ListItem sx={itemStyles}>
+          <ListItem sx={getLinkStyle('/profile')}>
             <NextLink href="/profile" className="sideLinks">
               <ListIcon as={RiUserSettingsLine} className="iconStyles" />
             </NextLink>
