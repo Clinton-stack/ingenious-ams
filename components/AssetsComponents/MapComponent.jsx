@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -15,6 +15,15 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = ( ) => {
     const location = [51.505, -0.09]
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+    if (!mounted) {
+      return null;
+    }
 
 
  

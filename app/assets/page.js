@@ -1,13 +1,24 @@
 'use client';
 import { Box, Flex, VStack } from '@chakra-ui/react'
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import assets_data from '../../data/assets_data.json'
 import BasicTable from '@/components/usersComponents/BasicTable'
-import MapComponent from '@/components/AssetsComponents/MapComponent'
+import dynamic from 'next/dynamic'
+const MapComponent = dynamic(() => import('@/components/AssetsComponents/MapComponent'), { ssr: false });
 
 export default function Assets() {
     const data = useMemo(() => assets_data, [])
     const position = [51.505, -0.09]
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+  
+    if (!mounted) {
+      return null;
+    }
 
     /** @type import('@tanstack/react-table).ColumnDef<any>*/
   const columns = [

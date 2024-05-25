@@ -11,7 +11,6 @@ import { useState } from "react";
 import {
   Box,
   Button,
-  Checkbox,
   Flex,
   HStack,
   Input,
@@ -30,33 +29,16 @@ import { GoDash } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 
-export default function BasicTable({ data, columns, tableName }) {
+export default function BasicTable({ data, columns, tableName, onRowSelect }) {
   const [sorting, setSorting] = useState([]);
   const [filtering, setFiltering] = useState("");
   const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 10 });
-  const [rowSelection, setRowSelection] = useState({});
-
-  const selectionColumn = {
-    id: "selection",
-    header: ({ table }) => (
-      <Checkbox
-        isChecked={table.getIsAllRowsSelected()}
-        isIndeterminate={table.getIsSomeRowsSelected()}
-        onChange={table.getToggleAllRowsSelectedHandler()}
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        isChecked={row.getIsSelected()}
-        isIndeterminate={row.getIsSomeSelected()}
-        onChange={row.getToggleSelectedHandler()}
-      />
-    ),
-  };
+  const [selectedRowId, setSelectedRowId] = useState(null);
+  const [selectedRowData, setSelectedRowData] = useState(null);
 
   const table = useReactTable({
     data,
-    columns: [selectionColumn, ...columns],
+    columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
@@ -66,16 +48,19 @@ export default function BasicTable({ data, columns, tableName }) {
       sorting,
       globalFilter: filtering,
       pagination,
-      rowSelection,
     },
     onSortingChange: setSorting,
     onGlobalFilterChange: setFiltering,
-    onRowSelectionChange: setRowSelection,
-    enableRowSelection: true,
   });
 
-  const selectedData = table.getSelectedRowModel().rows.map((row) => row.original);
-
+  const handleRowClick = (row) => {
+    const isSelected = row.id === selectedRowId;
+    setSelectedRowId(isSelected ? null : row.id);
+    setSelectedRowData(isSelected ? null : row.original);
+    if (onRowSelect) {
+      onRowSelect(isSelected ? null : row.original);
+    }
+  };
 
   return (
     <Box>
@@ -114,7 +99,7 @@ export default function BasicTable({ data, columns, tableName }) {
           {tableName}
         </Text>
         <TableContainer>
-          <Table variant="striped" colorScheme="gray" size="sm">
+          <Table size="sm">
             <Thead bgColor="#5DADEC">
               {table.getHeaderGroups().map((headerGroup) => (
                 <Tr key={headerGroup.id}>
@@ -144,7 +129,9 @@ export default function BasicTable({ data, columns, tableName }) {
                 <Tr
                   key={row.id}
                   cursor="pointer"
-                  onClick={() => row.toggleSelected()}
+                  onClick={() => handleRowClick(row)}
+                  className={selectedRowId === row.id ? "selected" : ""}
+                  id="cellStyle"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <Td key={cell.id}>

@@ -49,3 +49,13 @@ a {
   height: 100%;
   width: 100%;
 }
+
+tr:hover{
+  background-color: #CCEEFF !important;
+
+}
+tr.selected{
+  background-color: #CCEEFF !important;
+
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
