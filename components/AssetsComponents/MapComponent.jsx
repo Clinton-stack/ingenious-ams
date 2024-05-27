@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -13,9 +13,8 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png',
 });
 
-const MapComponent = ( ) => {
-    const location = [51.505, -0.09]
-    const [mounted, setMounted] = useState(false);
+const MapComponent = ({coordinates} ) => {
+  const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
       setMounted(true);
@@ -29,18 +28,28 @@ const MapComponent = ( ) => {
  
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={coordinates} zoom={5} scrollWheelZoom={false}>
+      <UpdateMapCenter coordinates={coordinates} />
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
+    <Marker position={coordinates}>
       <Popup>
         A pretty CSS3 popup. <br /> Easily customizable.
       </Popup>
     </Marker>
   </MapContainer>
   );
+};
+
+const UpdateMapCenter = ({ coordinates }) => {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(coordinates);
+  }, [coordinates, map]);
+
+  return null;
 };
 
 export default MapComponent;
