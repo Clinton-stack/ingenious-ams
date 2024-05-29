@@ -109,7 +109,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/')}>
             <NextLink href="/" className="sideLinks mRight">
               <Image
-                src="icons/dashboard.svg"
+                src="/icons/dashboard.svg"
                 mr="20px"
                 boxSize="16px"
                 alt="dashboard icon"
@@ -126,7 +126,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/assets')}>
             <NextLink href="/assets" className="sideLinks mRight">
               <Image
-                src="icons/assets-icon.svg"
+                src="/icons/assets-icon.svg"
                 mr="20px"
                 boxSize="16px"
                 alt="assets icon"
@@ -138,7 +138,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/assets-managers')}>
             <NextLink href="/assets-managers" className="sideLinks mRight">
               <Image
-                src="icons/assets-manager-icon.svg"
+                src="/icons/assets-manager-icon.svg"
                 mr="20px"
                 boxSize="16px"
                 alt="assets manager icon"
@@ -150,7 +150,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/collaborators')}>
             <NextLink href="/collaborators" className="sideLinks mRight">
               <Image
-                src="icons/collaborators-icon.svg"
+                src="/icons/collaborators-icon.svg"
                 mr="20px"
                 boxSize="16px"
                 alt="collaborators icon"
@@ -166,7 +166,7 @@ const Sidebar = () => {
             </NextLink>
           </ListItem>
           <ListItem sx={getLinkStyle('/consumers')}>
-            <NextLink href="icons/consumers" className="sideLinks mRight">
+            <NextLink href="/consumers" className="sideLinks mRight">
               <ListIcon as={FaUsers} mr="20px" />
               Consumers
             </NextLink>
@@ -198,7 +198,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/')}>
             <NextLink href="/" className="sideLinks">
               <Image
-                src="icons/dashboard.svg"
+                src="/icons/dashboard.svg"
                 className="iconStyles"
                 alt="dasboard icon"
               />
@@ -212,7 +212,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/assets')}>
             <NextLink href="/assets" className="sideLinks">
               <Image
-                src="icons/assets-icon.svg"
+                src="/icons/assets-icon.svg"
                 className="iconStyles"
                 alt="assest icon"
               />
@@ -222,7 +222,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/assets-managers')}>
             <NextLink href="/asset-managers" className="sideLinks">
               <Image
-                src="icons/assets-manager-icon.svg"
+                src="/icons/assets-manager-icon.svg"
                 className="iconStyles"
                 alt="assets manager icon"
               />
@@ -232,7 +232,7 @@ const Sidebar = () => {
           <ListItem sx={getLinkStyle('/collaborators')}>
             <NextLink href="/collaborators" className="sideLinks">
               <Image
-                src="icons/collaborators-icon.svg"
+                src="/icons/collaborators-icon.svg"
                 className="iconStyles"
                 alt="collaborators icon"
               />

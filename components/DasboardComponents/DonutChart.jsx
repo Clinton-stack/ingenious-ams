@@ -1,12 +1,15 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Chart as ChartJS, ArcElement, DoughnutController, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, DoughnutController, CategoryScale, LinearScale, Title, Tooltip, Legend);
 const DonutChart = () => {
+  
+  const chartRef = useRef(null);
+
   const data = {
-    labels: ['Clint Views', 'Afven Pharmaceuticals', 'Tims Brothels', 'Mikes Bar', 'Joes Garage'],
+    labels: ['Clint Views', 'Afven Pharma.', 'Tims Brothels', 'Mikes Bar', 'Joes Garage'],
     datasets: [
       {
         label: 'Top Assets',
@@ -18,6 +21,8 @@ const DonutChart = () => {
     ],
   };
   const options = {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,
@@ -33,9 +38,21 @@ const DonutChart = () => {
     },
   };
 
+  const handleResize = () => {
+    if (chartRef.current) {
+      chartRef.current.update(); // Correctly update the chart instance
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div style={{ height: 'auto', width: '400px' }}>
-      <Doughnut data={data} options={options}/>
+    <div style={{ height: 'auto', width: 'auto' }}>
+      <Doughnut ref={chartRef} data={data} options={options}/>
     </div>
   );
 };

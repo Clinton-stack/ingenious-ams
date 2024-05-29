@@ -74,37 +74,37 @@ export default function Assets() {
             {selectedRow && (
                 <HStack bg='#fff' p='10px' w='100%'>
                 <Image src='/images/victoriafalls.png' alt={selectedRow?.name} w='103px' borderRadius='2px'/>
-                <Box mr='10px' borderRight='1px solid gray' pr='3px'>
-                  <Heading as='h3' fontSize='11px'>{selectedRow?.name}</Heading>
-                  <Text fontSize='7px' mb='2px'>{selectedRow?.location}</Text>
-                  <Text fontSize='7px'> <b>Assets Manager: </b> {selectedRow?.assets_manager}</Text>
+                <Box mr='10px' borderRight='1px solid #D8D8D8' pr='3px'>
+                  <Heading as='h3' fontSize='14px'>{selectedRow?.name}</Heading>
+                  <Text fontSize='10px' mb='2px'>{selectedRow?.location}</Text>
+                  <Text fontSize='10px'> <b>Assets Manager: </b> {selectedRow?.assets_manager}</Text>
                 </Box>
                 <Box>
-                  <Text fontSize='7px'> <b>Consumer: </b> {selectedRow?.consumers}</Text>
-                  <Text fontSize='7px'> <b>Type: </b> {selectedRow?.type}</Text>
-                  <Text fontSize='7px'> <b>Facility Manager: </b> {selectedRow?.name}</Text>
-                  <Text fontSize='7px'> <b>Total Earnings: </b> {selectedRow?.type}</Text>
+                  <Text fontSize='10px'> <b>Consumer: </b> {selectedRow?.consumers}</Text>
+                  <Text fontSize='10px'> <b>Type: </b> {selectedRow?.type}</Text>
+                  <Text fontSize='10px'> <b>Facility Manager: </b> {selectedRow?.name}</Text>
+                  <Text fontSize='10px'> <b>Total Earnings: </b> {selectedRow?.type}</Text>
                 </Box>
             </HStack>
             )}
           
             <Box bg='#fff' p='10px' w='100%'>
               <HStack mb={'5px'}>
-              <Heading as='h3' fontSize='11px'>Earnings</Heading>
-              <Text  fontSize='7px'> Mar. 20233 - Mar. 2023</Text>
+              <Heading as='h3' fontSize='14px'>Earnings</Heading>
+              <Text  fontSize='10px'> Mar. 20233 - Mar. 2023</Text>
               </HStack>
               <HStack  w='100%' spacing='40px'>
                 <VStack spacing={0}>
-                <Text fontSize='7px'> Avg. Monthly Income Earnings: </Text>
-                <Text as='h3' fontSize='13'>$87,000</Text>
+                <Text fontSize='10px'> Avg. Monthly Income Earnings: </Text>
+                <Text as='h3' fontSize='15px'>$87,000</Text>
                 </VStack>
                 <VStack spacing={0}>
-                <Text fontSize='7px'> Total Expenses: </Text>
-                <Text as='h3' fontSize='13'>$230,200</Text>
+                <Text fontSize='10px'> Total Expenses: </Text>
+                <Text as='h3' fontSize='15px'>$230,200</Text>
                 </VStack>
                 <VStack spacing={0}>
-                <Text fontSize='7px'> Total Income: </Text>
-                <Text as='h3' fontSize='13'>$901,200</Text>
+                <Text fontSize='10px'> Total Income: </Text>
+                <Text as='h3' fontSize='15'>$901,200</Text>
                 </VStack>
               </HStack>
             </Box>
