@@ -2,11 +2,14 @@
 import React, { useEffect, useRef } from 'react';
 import { Chart as ChartJS, ArcElement, DoughnutController, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { useMediaQuery } from "@chakra-ui/react";
 
-ChartJS.register(ArcElement, DoughnutController, CategoryScale, LinearScale, Title, Tooltip, Legend);
+
+ChartJS.register(ArcElement, DoughnutController, CategoryScale, LinearScale, Title, Tooltip, Legend, ChartDataLabels);
 const DonutChart = () => {
-  
   const chartRef = useRef(null);
+  const [isPhoneScreen] = useMediaQuery("(max-width: 425px)");
 
   const data = {
     labels: ['Clint Views', 'Afven Pharma.', 'Tims Brothels', 'Mikes Bar', 'Joes Garage'],
@@ -26,7 +29,7 @@ const DonutChart = () => {
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: isPhoneScreen? 'bottom' : 'right',
         labels: {
           boxWidth: 10, // Adjust the width of the legend box
           padding: 10, // Add padding around the legend labels
@@ -34,6 +37,9 @@ const DonutChart = () => {
             size: 12, // Set the font size for legend labels
           },
         },
+      },
+      datalabels:{
+        display: false,
       },
     },
   };

@@ -3,15 +3,20 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { useMediaQuery } from "@chakra-ui/react";
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
+
 export default function PieChart() {
+
+const [isPhoneScreen] = useMediaQuery("(max-width: 425px)");
+
   const data = {
     labels: [
       "Spectranet",
       "Surge Security",
-      "Inegnious Tech",
+      "Ingenious Tech",
       "Jife Inc",
       "Amazon",
       "AlH international",
@@ -37,7 +42,7 @@ export default function PieChart() {
     plugins: {
       legend: {
         display: true,
-        position: "right",
+        position: isPhoneScreen ? "bottom" : "right",
         labels: {
           boxWidth: 30, // Adjust the width of the legend box
           padding: 10, // Add padding around the legend labels
@@ -58,14 +63,14 @@ export default function PieChart() {
         color: "#fff",
         font: {
           weight: "bold",
-          size: 12,
+          size: 10,
         },
       },
     },
   };
 
   return (
-    <div style={{ height: "350px", width: "100%" }}>
+    <div style={{ maxHeight: "300px", width: "auto" }}>
       <Pie data={data} options={options} />
     </div>
   );

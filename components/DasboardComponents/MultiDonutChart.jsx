@@ -3,8 +3,9 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Center } from '@chakra-ui/react';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const MultiLevelDoughnutChart = () => {
   const data = {
@@ -66,6 +67,9 @@ const MultiLevelDoughnutChart = () => {
             return label;
           },
         },
+      },
+      datalabels: {
+        display: false,
       },
     },
   };

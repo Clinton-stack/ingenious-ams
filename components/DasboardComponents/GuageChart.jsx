@@ -2,10 +2,11 @@
 "use client";
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
 import { Box, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const GaugeChart = () => {
   const data1 = {
@@ -73,6 +74,9 @@ const GaugeChart = () => {
       },
       tooltip: {
         enabled: false,
+      },
+      datalabels: {
+        display: false,
       },
     },
   };

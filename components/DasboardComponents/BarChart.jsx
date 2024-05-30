@@ -2,8 +2,9 @@
 import React, { useRef, useEffect } from 'react';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
+ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend, ChartDataLabels);
 
 const BarChart = () => {
   const chartRef = useRef(null);
@@ -39,6 +40,12 @@ const BarChart = () => {
         },
       },
     },
+    plugins: {
+      datalabels:{
+        display: false
+      },
+
+    }
   };
 
   const handleResize = () => {
