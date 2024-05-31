@@ -12,6 +12,7 @@ import {
   CategoryScale,
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 
 ChartJS.register(
   LineElement,
@@ -25,6 +26,8 @@ ChartJS.register(
 );
 
 export default function LineChart() {
+  const [isPhoneScreen] = useMediaQuery("(max-width: 425px)");
+
   const data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -60,8 +63,18 @@ export default function LineChart() {
   };
 
   return (
-    <div style={{ height: "400px", width: "100%", position: 'relative'}}>
-      <Line data={data} options={options} />
-    </div>
+    <Box
+      width="100%"
+      height={isPhoneScreen ? "100vw" : "400px"}
+      position="relative"
+      overflow="hidden"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Box className={isPhoneScreen ? "rotate-90" : ""} h='100%' w='100%'>
+        <Line data={data} options={options} />
+      </Box>
+    </Box>
   );
 }

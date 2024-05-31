@@ -50,7 +50,7 @@ export default function TableChart() {
                   size="40px" 
                 >
                   <Image
-                    src="images/ingenious.png"
+                    src="/images/ingenious.png"
                     h="30px"
                     w="auto"
                     alt="Company or user logo"
@@ -73,7 +73,7 @@ export default function TableChart() {
                   size="40px"
                 >
                   <Image
-                    src="images/ingenious.png"
+                    src="/images/ingenious.png"
                     h="30px"
                     w="auto"
                     alt="Company or user logo"
